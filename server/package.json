@@ -1,11 +1,11 @@
 {
-  "name": "ee-nginx",
+  "name": "ee-nginx-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start:server": "node server/index.js"
+    "start:server": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +16,6 @@
     "cors": "2.8.5",
     "express": "4.16.4",
     "jest": "24.0.0",
-    "morgan": "1.9.1",
-    "request-promise": "4.2.2"
+    "morgan": "1.9.1"
   }
 }

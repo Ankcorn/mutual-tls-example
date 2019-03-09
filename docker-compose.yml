@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx: 
+    image: nginx:latest
+    container_name: production_nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/certs/entity-extraction.crt:/root/certs/entity_extraction.crt
+      - ./nginx/certs/entity-extraction.key:/root/certs/entity_extraction.key
+      - ./nginx/ca/ca.crt:/root/certs/ca.crt
+    ports:
+      - 80:80
+      - 443:443
+  node:
+    build: ./server
+    container_name: node_app

@@ -1,14 +1,21 @@
-const axios = require('axios');
+const request = require('request-promise');
+const fs = require('fs');
+const path = require('path');
 
 async function requestExtraction(message) {
   try {
-    console.log('sending request')
-    const result = await axios.post('http://localhost:3050/api/extract', {message});
-    console.log(result.status)
-    return result.data
-  } catch(e) {
-      console.log(e.message);
-      throw e
+    const result = await request({
+      uri:"https://localhost/api/extract",
+      body:{ message },
+      method: 'POST',
+      json: true,
+      cert: fs.readFileSync(path.join(__dirname,'../nginx/client/ee.crt')),
+      key: fs.readFileSync(path.join(__dirname,'../nginx/client/ee.key')),
+      ca: fs.readFileSync(path.join(__dirname,'../nginx/ca/ca.crt'))
+    });
+    return result;
+  } catch (e) {
+    throw e;
   }
 }
 
