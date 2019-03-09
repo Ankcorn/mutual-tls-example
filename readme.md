@@ -2,9 +2,10 @@
 
 This repo contains a reference setup for a nginx as a https reverse proxy
 
-It has the current features
 [x] Test client to check that the config is correct
+
 [x] https with tls 1.2
+
 [x] mutual tls
 
 # Links
