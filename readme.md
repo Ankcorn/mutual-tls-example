@@ -16,7 +16,7 @@ https://blog.codeship.com/how-to-set-up-mutual-tls-authentication/ - Mutual TLS 
 To test the implementation of HTTPS follow these steps
 
 ```
-    git clone ...
+    git clone https://github.com/Ankcorn/mutual-tls-example.git
     cd ee-nginx
     npm install
     ./nginx/gen_certs.sh
