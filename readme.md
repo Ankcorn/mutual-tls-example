@@ -17,7 +17,7 @@ To test the implementation of HTTPS follow these steps
 
 ```
     git clone https://github.com/Ankcorn/mutual-tls-example.git
-    cd ee-nginx
+    cd mutual-tls-example
     npm install
     ./nginx/gen_certs.sh
     docker-compose up -d
