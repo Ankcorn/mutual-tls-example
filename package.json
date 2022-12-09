@@ -14,7 +14,7 @@
     "axios": "0.18.0",
     "body-parser": "1.18.3",
     "cors": "2.8.5",
-    "express": "4.16.4",
+    "express": "4.17.3",
     "jest": "24.0.0",
     "morgan": "1.9.1",
     "request-promise": "4.2.2"
